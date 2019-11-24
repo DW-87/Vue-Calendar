@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/Calendar';
+import Calendar from './components/Calendar';
 
 export default {
   name: 'App',
