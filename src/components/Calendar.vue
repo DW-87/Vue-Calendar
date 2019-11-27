@@ -191,24 +191,24 @@ export default {
       this.events = events;
     },
     async addEvent() {
-        if (this.name && this.start && this.end) {
-            await db.collection("calEvent").add({
-                name: this.name,
-                details: this.details,
-                start: this.start,
-                end: this.end,
-                color: this.color
-            });
-            this.getEvents();
-            this.name = "";
-            this.details = "";
-            this.details = "";
-            this.start = "";
-            this.end = "";
-            this.color = "";
-        } else {
-            alert('Name, start and end date are required');
-        }
+      if (this.name && this.start && this.end) {
+        await db.collection("calEvent").add({
+          name: this.name,
+          details: this.details,
+          start: this.start,
+          end: this.end,
+          color: this.color
+        });
+        this.getEvents();
+        this.name = "";
+        this.details = "";
+        this.details = "";
+        this.start = "";
+        this.end = "";
+        this.color = "#1976D2";
+      } else {
+        alert("Name, start and end date are required");
+      }
     },
     async updateEvent(ev) {
       await db
